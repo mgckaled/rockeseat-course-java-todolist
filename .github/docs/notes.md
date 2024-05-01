@@ -1,6 +1,6 @@
 # Anotagções Importantes
 
-- Acesso ao banco de dados H2 in-memory: `localhost:8080/h2-console/`
+- Acesso ao banco de dados H2 *in-memory*: `localhost:8080/h2-console/`
 
 **Sumário:**
 
@@ -16,6 +16,7 @@
   - [9 - Criando Tabela Usuário](#9---criando-tabela-usuário)
   - [10 - Repository](#10---repository)
   - [11 - Validando username](#11---validando-username)
+  - [12 - Utilizando ResponseEntity](#12---utilizando-responseentity)
 
 ## 1 - Configurando Ambiente
 
@@ -62,3 +63,7 @@ Nesta aula, aprendemos como o Spring pode gerenciar o ciclo de vida de um reposi
 ## 11 - Validando username
 
 Nesta aula, vamos aprender sobre validação de dados em uma aplicação. Vamos começar verificando se um usuário já existe antes de salvá-lo no banco de dados. Para isso, utilizaremos o método `findByUsername` do Spring Data, que nos permite buscar um usuário pelo seu nome de usuário. Caso o usuário já exista, retornaremos uma mensagem de erro. Caso contrário, continuaremos com o processo de salvamento. Além disso, discutiremos a importância de retornar diferentes tipos de resposta, dependendo do resultado da operação, como sucesso ou erro. Na próxima aula, veremos como implementar essa lógica de retorno de sucesso e erro.
+
+## 12 - Utilizando ResponseEntity
+
+Nesta aula, vamos aprender como ter retornos diferentes na nossa aplicação dentro da mesma requisição. Utilizaremos o tipo Response Entity do Spring Framework HTTP para retornar mensagens de erro e status code adequados. Podemos utilizar o status code 400 para indicar erros, como quando o usuário já existe. Também podemos utilizar o status code 201 para indicar sucesso, como quando um usuário é criado. O Response Entity nos permite retornar tanto casos de sucesso como casos de erro de forma eficiente.
