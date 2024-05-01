@@ -17,6 +17,7 @@
   - [10 - Repository](#10---repository)
   - [11 - Validando username](#11---validando-username)
   - [12 - Utilizando ResponseEntity](#12---utilizando-responseentity)
+  - [13 - Hash da senha](#13---hash-da-senha)
 
 ## 1 - Configurando Ambiente
 
@@ -67,3 +68,7 @@ Nesta aula, vamos aprender sobre validação de dados em uma aplicação. Vamos 
 ## 12 - Utilizando ResponseEntity
 
 Nesta aula, vamos aprender como ter retornos diferentes na nossa aplicação dentro da mesma requisição. Utilizaremos o tipo Response Entity do Spring Framework HTTP para retornar mensagens de erro e status code adequados. Podemos utilizar o status code 400 para indicar erros, como quando o usuário já existe. Também podemos utilizar o status code 201 para indicar sucesso, como quando um usuário é criado. O Response Entity nos permite retornar tanto casos de sucesso como casos de erro de forma eficiente.
+
+## 13 - Hash da senha
+
+Nesta aula, aprendemos sobre a importância de criptografar senhas em nossas aplicações para garantir a segurança das informações dos usuários. Utilizamos a biblioteca bcrypt para realizar a criptografia das senhas. Aprendemos a importar a biblioteca, definir o custo da criptografia e aplicar a função de hash na senha antes de armazená-la no banco de dados. Com isso, garantimos que as senhas não ficarão expostas e protegemos a privacidade dos usuários.
