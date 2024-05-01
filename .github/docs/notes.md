@@ -14,6 +14,7 @@
   - [7 - Lombok](#7---lombok)
   - [8 - Banco de Dados](#8---banco-de-dados)
   - [9 - Criando Tabela Usuário](#9---criando-tabela-usuário)
+  - [10 - Repository](#10---repository)
 
 ## 1 - Configurando Ambiente
 
@@ -52,3 +53,7 @@ Nesta aula, vamos aprender como armazenar informações de usuários em um banco
 ## 9 - Criando Tabela Usuário
 
 Nesta aula, começamos a criar a tabela de usuários em nossa aplicação usando o conceito de ORM (Object-Relational Mapping). Definimos a entidade "User" como nossa tabela de usuários no banco de dados. Também adicionamos a chave primária, que é um ID único gerado automaticamente usando o tipo UUID. Além disso, definimos outros atributos como colunas na tabela, como "Username", "Password", "Name" e "CreatedAt". Observamos que o banco de dados utiliza o padrão de separação de palavras com underline.
+
+## 10 - Repository
+
+Nesta aula, aprendemos como o Spring pode gerenciar o ciclo de vida de um repositório. Utilizando a anotação `@Autowired`, podemos pedir ao Spring para instanciar e gerenciar nosso repositório, garantindo que ele seja inicializado corretamente. Com isso, podemos acessar os métodos disponíveis no JPA Repository, como o método `save`, para salvar entidades no banco de dados. Também vimos como criar uma interface de repositório, estendendo a classe `JpaRepository` do Spring Data JPA, e definindo o tipo da entidade e do ID. Na próxima aula, iremos validar a criação de usuários duplicados.
