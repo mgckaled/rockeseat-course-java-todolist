@@ -1,8 +1,10 @@
-# Descrição das Aulas
+# Anotagções Importantes
+
+- Acesso ao banco de dados H2 in-memory: `localhost:8080/h2-console/`
 
 **Sumário:**
 
-- [Descrição das Aulas](#descrição-das-aulas)
+- [Anotagções Importantes](#anotagções-importantes)
   - [1 - Configurando Ambiente](#1---configurando-ambiente)
   - [2 - Criando Estrutura de Projeto](#2---criando-estrutura-de-projeto)
   - [3 - Entendendo Estrutura](#3---entendendo-estrutura)
@@ -11,6 +13,7 @@
   - [6 - Getters e Setters](#6---getters-e-setters)
   - [7 - Lombok](#7---lombok)
   - [8 - Banco de Dados](#8---banco-de-dados)
+  - [9 - Criando Tabela Usuário](#9---criando-tabela-usuário)
 
 ## 1 - Configurando Ambiente
 
@@ -45,3 +48,7 @@ Nesta aula, vamos aprender sobre o **Lombok**, uma biblioteca do Java que nos pe
 ## 8 - Banco de Dados
 
 Nesta aula, vamos aprender como armazenar informações de usuários em um banco de dados usando o **Spring Data JPA**. O **Spring Data JPA** é um projeto do Spring que nos permite fazer a comunicação com o banco de dados e manipular os dados de forma fácil. Ele utiliza o conceito de ORM (Mapeamento Objeto-Relacional) para transformar objetos em uma forma que o banco de dados entenda. Vamos utilizar o H2 como banco de dados em memória para fins de aprendizado, mas em produção, você pode usar outros bancos de dados como PostgreSQL ou MySQL. Vamos configurar as dependências no arquivo pom.xml e também configurar o H2 no arquivo application.properties. Depois de configurado, podemos acessar o console do H2 para verificar se está tudo funcionando corretamente. Nas próximas aulas, vamos construir as tabelas e entender como o **Spring Data JPA** se comunica com o banco de dados.
+
+## 9 - Criando Tabela Usuário
+
+Nesta aula, começamos a criar a tabela de usuários em nossa aplicação usando o conceito de ORM (Object-Relational Mapping). Definimos a entidade "User" como nossa tabela de usuários no banco de dados. Também adicionamos a chave primária, que é um ID único gerado automaticamente usando o tipo UUID. Além disso, definimos outros atributos como colunas na tabela, como "Username", "Password", "Name" e "CreatedAt". Observamos que o banco de dados utiliza o padrão de separação de palavras com underline.
