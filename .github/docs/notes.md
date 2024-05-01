@@ -15,6 +15,7 @@
   - [8 - Banco de Dados](#8---banco-de-dados)
   - [9 - Criando Tabela Usuário](#9---criando-tabela-usuário)
   - [10 - Repository](#10---repository)
+  - [11 - Validando username](#11---validando-username)
 
 ## 1 - Configurando Ambiente
 
@@ -57,3 +58,7 @@ Nesta aula, começamos a criar a tabela de usuários em nossa aplicação usando
 ## 10 - Repository
 
 Nesta aula, aprendemos como o Spring pode gerenciar o ciclo de vida de um repositório. Utilizando a anotação `@Autowired`, podemos pedir ao Spring para instanciar e gerenciar nosso repositório, garantindo que ele seja inicializado corretamente. Com isso, podemos acessar os métodos disponíveis no JPA Repository, como o método `save`, para salvar entidades no banco de dados. Também vimos como criar uma interface de repositório, estendendo a classe `JpaRepository` do Spring Data JPA, e definindo o tipo da entidade e do ID. Na próxima aula, iremos validar a criação de usuários duplicados.
+
+## 11 - Validando username
+
+Nesta aula, vamos aprender sobre validação de dados em uma aplicação. Vamos começar verificando se um usuário já existe antes de salvá-lo no banco de dados. Para isso, utilizaremos o método `findByUsername` do Spring Data, que nos permite buscar um usuário pelo seu nome de usuário. Caso o usuário já exista, retornaremos uma mensagem de erro. Caso contrário, continuaremos com o processo de salvamento. Além disso, discutiremos a importância de retornar diferentes tipos de resposta, dependendo do resultado da operação, como sucesso ou erro. Na próxima aula, veremos como implementar essa lógica de retorno de sucesso e erro.
