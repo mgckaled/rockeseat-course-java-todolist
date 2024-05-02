@@ -18,6 +18,7 @@ public class TaskController {
     @PostMapping("/")
     public ResponseEntity<TaskModel> create(@RequestBody TaskModel taskModel) {
         try {
+            System.out.println("filtro chegou no controller");
             TaskModel createdTask = taskRepository.save(taskModel);
             return ResponseEntity.ok(createdTask);
         } catch (Exception e) {

@@ -20,6 +20,7 @@
   - [13 - Hash da senha](#13---hash-da-senha)
   - [14 - Tabela de Task](#14---tabela-de-task)
   - [15 - Cadastro de tarefa](#15---cadastro-de-tarefa)
+  - [16 - Registrar Filtro](#16---registrar-filtro)
 
 ## 1 - Configurando Ambiente
 
@@ -82,3 +83,7 @@ Nesta aula, vamos verificar se a tabela foi criada com sucesso. Faremos uma alte
 ## 15 - Cadastro de tarefa
 
 Nesta aula, vamos criar o `Task Controller` e o repositório para a nossa tarefa. O `Task Controller` será responsável por lidar com as requisições relacionadas às tarefas, enquanto o repositório será responsável por armazenar e recuperar os dados das tarefas. Vamos definir o mapeamento para as requisições relacionadas às tarefas e implementar o método de criação de tarefas. Vamos também adicionar validações para garantir que a criação de tarefas seja restrita ao usuário proprietário da tarefa. Na próxima aula, vamos abordar como resolver os problemas de criar tarefas para usuários inexistentes e sem permissão.
+
+## 16 - Registrar Filtro
+
+Nesta aula, vamos aprender sobre a utilização de filtros em uma aplicação Java. Vamos criar um filtro de autenticação básica, onde o usuário precisará passar suas credenciais para cadastrar uma tarefa. O filtro irá verificar se o usuário está cadastrado e se a senha está correta antes de permitir o cadastro. Vamos implementar o filtro utilizando a interface `ServletFilter` e o método `doFilter`, que nos permite barrar a requisição ou permitir que ela siga viagem.
