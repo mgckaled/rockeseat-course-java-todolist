@@ -18,6 +18,7 @@
   - [11 - Validando username](#11---validando-username)
   - [12 - Utilizando ResponseEntity](#12---utilizando-responseentity)
   - [13 - Hash da senha](#13---hash-da-senha)
+  - [14 - Tabela de Task](#14---tabela-de-task)
 
 ## 1 - Configurando Ambiente
 
@@ -72,3 +73,7 @@ Nesta aula, vamos aprender como ter retornos diferentes na nossa aplicação den
 ## 13 - Hash da senha
 
 Nesta aula, aprendemos sobre a importância de criptografar senhas em nossas aplicações para garantir a segurança das informações dos usuários. Utilizamos a biblioteca bcrypt para realizar a criptografia das senhas. Aprendemos a importar a biblioteca, definir o custo da criptografia e aplicar a função de hash na senha antes de armazená-la no banco de dados. Com isso, garantimos que as senhas não ficarão expostas e protegemos a privacidade dos usuários.
+
+## 14 - Tabela de Task
+
+Nesta aula, vamos verificar se a tabela foi criada com sucesso. Faremos uma alteração no título, limitando a quantidade de caracteres permitidos. Em seguida, rodaremos a aplicação e verificaremos se a tabela de tarefas foi criada corretamente. Além disso, discutiremos a possibilidade de adicionar campos como data de início, data de término, ID do usuário e prioridade da tarefa. Definiremos a estrutura da tabela e criaremos o conteúdo das tarefas.
