@@ -26,6 +26,7 @@
   - [19 - Validando rota](#19---validando-rota)
   - [20 - Setando atributo na request](#20---setando-atributo-na-request)
   - [21 - Validação das horas](#21---validação-das-horas)
+  - [22 - Listando as tarefas](#22---listando-as-tarefas)
 
 ## 1 - Configurando Ambiente
 
@@ -112,3 +113,7 @@ Nesta aula, aprendemos a passar o ID do usuário autenticado para o controller a
 ## 21 - Validação das horas
 
 Nesta aula, vamos aprender a adicionar validações em nossa aplicação. Vamos começar validando a hora. Atualmente, quando cadastramos uma tarefa, não fazemos nenhuma validação. Isso significa que podemos cadastrar uma tarefa com uma data que já passou. Vamos corrigir isso. Vamos validar se a data que estamos passando é maior do que a data atual. Se a data atual for maior que a data de início, lançaremos um erro. Além disso, também vamos validar se a data de término é maior do que a data de início. Essas validações garantem que as regras de hora sejam seguidas corretamente.
+
+## 22 - Listando as tarefas
+
+Nesta aula, vamos criar uma funcionalidade para listar todas as tarefas de um usuário com base em suas credenciais. Já temos a validação para buscar as tarefas apenas do usuário em questão. Agora, vamos criar um método público para listar as tarefas, utilizando o `HttpServletRequest` e o método `findAll` do `TaskRepository`. No entanto, precisamos filtrar as tarefas pelo ID do usuário. Faremos isso utilizando o método `findByIdUser` no repositório e passando o ID do usuário obtido através do `getAttribute`. Em seguida, retornaremos a lista de tarefas encontradas. Por fim, faremos um teste para verificar se tudo está funcionando corretamente.
