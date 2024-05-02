@@ -1,8 +1,11 @@
 package br.com.mgck.todolist.task;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,13 +20,27 @@ public class TaskController {
     @Autowired
     private ITaskRepository taskRepository;
 
+    @SuppressWarnings("rawtypes")
     @PostMapping("/")
-    public TaskModel create(@RequestBody TaskModel taskModel, HttpServletRequest request) {
-
+    public ResponseEntity create(@RequestBody TaskModel taskModel, HttpServletRequest request) {
+        // set idUser from user request POST
         var idUSer = request.getAttribute("idUser");
         taskModel.setIdUser((UUID) idUSer);
 
+        // validate dates
+        var currentDate = LocalDateTime.now();
+        if (currentDate.isAfter(taskModel.getStartAt()) || currentDate.isAfter(taskModel.getEndAt())) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body("A data de início // data de término deve ser maior do que a data atual");
+        }
+
+        if (taskModel.getStartAt().isAfter(taskModel.getEndAt())) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body("A data de início de uma tarefa deve ser anterior a sua data de término.");
+        }
+
+        // save task into table.
         var task = this.taskRepository.save(taskModel);
-        return task;
+        return ResponseEntity.status(HttpStatus.OK).body(task);
     }
 }

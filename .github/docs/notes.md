@@ -25,6 +25,7 @@
   - [18 - Decode da senha](#18---decode-da-senha)
   - [19 - Validando rota](#19---validando-rota)
   - [20 - Setando atributo na request](#20---setando-atributo-na-request)
+  - [21 - Validação das horas](#21---validação-das-horas)
 
 ## 1 - Configurando Ambiente
 
@@ -107,3 +108,7 @@ Nesta aula, vamos aprender sobre validação de rotas em uma aplicação.
 ## 20 - Setando atributo na request
 
 Nesta aula, aprendemos a passar o ID do usuário autenticado para o controller através do filtro de autenticação. Antes, estávamos passando o ID do usuário diretamente no JSON da requisição, mas agora podemos utilizar a autenticação para obter esse ID. Removemos o ID do usuário do JSON e, no filtro, adicionamos o ID do usuário como um atributo no request. No controller, podemos recuperar esse atributo usando o método `request.getAttribute`. Com isso, garantimos mais segurança e simplificamos o processo de criação de tarefas, pois o usuário só poderá criar uma tarefa se estiver autenticado.
+
+## 21 - Validação das horas
+
+Nesta aula, vamos aprender a adicionar validações em nossa aplicação. Vamos começar validando a hora. Atualmente, quando cadastramos uma tarefa, não fazemos nenhuma validação. Isso significa que podemos cadastrar uma tarefa com uma data que já passou. Vamos corrigir isso. Vamos validar se a data que estamos passando é maior do que a data atual. Se a data atual for maior que a data de início, lançaremos um erro. Além disso, também vamos validar se a data de término é maior do que a data de início. Essas validações garantem que as regras de hora sejam seguidas corretamente.
