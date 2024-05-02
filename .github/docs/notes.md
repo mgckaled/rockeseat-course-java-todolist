@@ -22,6 +22,7 @@
   - [15 - Cadastro de tarefa](#15---cadastro-de-tarefa)
   - [16 - Registrar Filtro](#16---registrar-filtro)
   - [17 - Continuando a Implementação do Filtro](#17---continuando-a-implementação-do-filtro)
+  - [18 - Decode da senha](#18---decode-da-senha)
 
 ## 1 - Configurando Ambiente
 
@@ -92,3 +93,7 @@ Nesta aula, vamos aprender sobre a utilização de filtros em uma aplicação Ja
 ## 17 - Continuando a Implementação do Filtro
 
 Nesta aula, vamos continuar a implementação do filtro utilizando o `Once Per Request Filter` do Spring. Isso facilita o trabalho com requisições HTTP em uma API, pois não precisamos converter os Servlet Request e Servlet Response para HTTP Servlet Request e HTTP Servlet Response. Vamos passar as informações de autenticação (usuário e senha) no Basic Auth e realizar a validação do usuário e senha. Em seguida, vamos decodificar o Basic 64 e separar o usuário e senha para verificação.
+
+## 18 - Decode da senha
+
+Neste trecho da aula, vamos validar se um usuário existe no banco de dados. Utilizaremos o `UserRepository` para fazer essa validação, utilizando o método Find by Username. Se o usuário existir, validaremos a senha. Caso contrário, retornaremos um erro para o usuário. Se a senha for válida, continuaremos com a execução normal do código. Caso contrário, retornaremos um erro de autorização. Faremos essa validação apenas para a rota de tasks.
