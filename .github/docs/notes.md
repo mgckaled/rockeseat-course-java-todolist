@@ -19,6 +19,7 @@
   - [12 - Utilizando ResponseEntity](#12---utilizando-responseentity)
   - [13 - Hash da senha](#13---hash-da-senha)
   - [14 - Tabela de Task](#14---tabela-de-task)
+  - [15 - Cadastro de tarefa](#15---cadastro-de-tarefa)
 
 ## 1 - Configurando Ambiente
 
@@ -77,3 +78,7 @@ Nesta aula, aprendemos sobre a importância de criptografar senhas em nossas apl
 ## 14 - Tabela de Task
 
 Nesta aula, vamos verificar se a tabela foi criada com sucesso. Faremos uma alteração no título, limitando a quantidade de caracteres permitidos. Em seguida, rodaremos a aplicação e verificaremos se a tabela de tarefas foi criada corretamente. Além disso, discutiremos a possibilidade de adicionar campos como data de início, data de término, ID do usuário e prioridade da tarefa. Definiremos a estrutura da tabela e criaremos o conteúdo das tarefas.
+
+## 15 - Cadastro de tarefa
+
+Nesta aula, vamos criar o `Task Controller` e o repositório para a nossa tarefa. O `Task Controller` será responsável por lidar com as requisições relacionadas às tarefas, enquanto o repositório será responsável por armazenar e recuperar os dados das tarefas. Vamos definir o mapeamento para as requisições relacionadas às tarefas e implementar o método de criação de tarefas. Vamos também adicionar validações para garantir que a criação de tarefas seja restrita ao usuário proprietário da tarefa. Na próxima aula, vamos abordar como resolver os problemas de criar tarefas para usuários inexistentes e sem permissão.
