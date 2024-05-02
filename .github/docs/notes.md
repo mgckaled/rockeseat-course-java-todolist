@@ -21,6 +21,7 @@
   - [14 - Tabela de Task](#14---tabela-de-task)
   - [15 - Cadastro de tarefa](#15---cadastro-de-tarefa)
   - [16 - Registrar Filtro](#16---registrar-filtro)
+  - [17 - Continuando a Implementação do Filtro](#17---continuando-a-implementação-do-filtro)
 
 ## 1 - Configurando Ambiente
 
@@ -87,3 +88,7 @@ Nesta aula, vamos criar o `Task Controller` e o repositório para a nossa tarefa
 ## 16 - Registrar Filtro
 
 Nesta aula, vamos aprender sobre a utilização de filtros em uma aplicação Java. Vamos criar um filtro de autenticação básica, onde o usuário precisará passar suas credenciais para cadastrar uma tarefa. O filtro irá verificar se o usuário está cadastrado e se a senha está correta antes de permitir o cadastro. Vamos implementar o filtro utilizando a interface `ServletFilter` e o método `doFilter`, que nos permite barrar a requisição ou permitir que ela siga viagem.
+
+## 17 - Continuando a Implementação do Filtro
+
+Nesta aula, vamos continuar a implementação do filtro utilizando o `Once Per Request Filter` do Spring. Isso facilita o trabalho com requisições HTTP em uma API, pois não precisamos converter os Servlet Request e Servlet Response para HTTP Servlet Request e HTTP Servlet Response. Vamos passar as informações de autenticação (usuário e senha) no Basic Auth e realizar a validação do usuário e senha. Em seguida, vamos decodificar o Basic 64 e separar o usuário e senha para verificação.
