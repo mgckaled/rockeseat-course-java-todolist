@@ -1,6 +1,6 @@
 # Anotagções Importantes
 
-- Acesso ao banco de dados H2 *in-memory*: `localhost:8080/h2-console/`
+- Acesso ao banco de dados H2 _in-memory_: `localhost:8080/h2-console/`
 
 **Sumário:**
 
@@ -23,6 +23,7 @@
   - [16 - Registrar Filtro](#16---registrar-filtro)
   - [17 - Continuando a Implementação do Filtro](#17---continuando-a-implementação-do-filtro)
   - [18 - Decode da senha](#18---decode-da-senha)
+  - [19 - Validando rota](#19---validando-rota)
 
 ## 1 - Configurando Ambiente
 
@@ -52,7 +53,7 @@ Nesta aula, vamos aprender sobre os métodos getters e setters em Java. Quando d
 
 ## 7 - Lombok
 
-Nesta aula, vamos aprender sobre o **Lombok**, uma biblioteca do Java que nos permite otimizar a criação de getters, setters e outros métodos, como construtores e `toString`. O **Lombok** utiliza annotations para definir quais métodos queremos incluir em nosso projeto. Para utilizá-lo, precisamos adicionar a dependência do **Lombok** em nosso arquivo `.xml`. Podemos utilizar a annotation `@Data` para gerar automaticamente os getters e setters para todos os atributos de uma classe. Também é possível utilizar as annotations `@Getter` e `@Setter` para gerar apenas os *getters* ou *setters*, respectivamente. O **Lombok** nos ajuda a deixar nosso código mais limpo e legível.
+Nesta aula, vamos aprender sobre o **Lombok**, uma biblioteca do Java que nos permite otimizar a criação de getters, setters e outros métodos, como construtores e `toString`. O **Lombok** utiliza annotations para definir quais métodos queremos incluir em nosso projeto. Para utilizá-lo, precisamos adicionar a dependência do **Lombok** em nosso arquivo `.xml`. Podemos utilizar a annotation `@Data` para gerar automaticamente os getters e setters para todos os atributos de uma classe. Também é possível utilizar as annotations `@Getter` e `@Setter` para gerar apenas os _getters_ ou _setters_, respectivamente. O **Lombok** nos ajuda a deixar nosso código mais limpo e legível.
 
 ## 8 - Banco de Dados
 
@@ -97,3 +98,7 @@ Nesta aula, vamos continuar a implementação do filtro utilizando o `Once Per R
 ## 18 - Decode da senha
 
 Neste trecho da aula, vamos validar se um usuário existe no banco de dados. Utilizaremos o `UserRepository` para fazer essa validação, utilizando o método Find by Username. Se o usuário existir, validaremos a senha. Caso contrário, retornaremos um erro para o usuário. Se a senha for válida, continuaremos com a execução normal do código. Caso contrário, retornaremos um erro de autorização. Faremos essa validação apenas para a rota de tasks.
+
+## 19 - Validando rota
+
+Nesta aula, vamos aprender sobre validação de rotas em uma aplicação.
