@@ -1,12 +1,14 @@
 package br.com.mgck.todolist.task;
 
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/tasks")
@@ -16,14 +18,12 @@ public class TaskController {
     private ITaskRepository taskRepository;
 
     @PostMapping("/")
-    public ResponseEntity<TaskModel> create(@RequestBody TaskModel taskModel) {
-        try {
-            System.out.println("filtro chegou no controller");
-            TaskModel createdTask = taskRepository.save(taskModel);
-            return ResponseEntity.ok(createdTask);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-        }
-    }
+    public TaskModel create(@RequestBody TaskModel taskModel, HttpServletRequest request) {
 
+        var idUSer = request.getAttribute("idUser");
+        taskModel.setIdUser((UUID) idUSer);
+
+        var task = this.taskRepository.save(taskModel);
+        return task;
+    }
 }

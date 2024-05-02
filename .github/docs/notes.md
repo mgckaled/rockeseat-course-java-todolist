@@ -24,6 +24,7 @@
   - [17 - Continuando a Implementação do Filtro](#17---continuando-a-implementação-do-filtro)
   - [18 - Decode da senha](#18---decode-da-senha)
   - [19 - Validando rota](#19---validando-rota)
+  - [20 - Setando atributo na request](#20---setando-atributo-na-request)
 
 ## 1 - Configurando Ambiente
 
@@ -102,3 +103,7 @@ Neste trecho da aula, vamos validar se um usuário existe no banco de dados. Uti
 ## 19 - Validando rota
 
 Nesta aula, vamos aprender sobre validação de rotas em uma aplicação.
+
+## 20 - Setando atributo na request
+
+Nesta aula, aprendemos a passar o ID do usuário autenticado para o controller através do filtro de autenticação. Antes, estávamos passando o ID do usuário diretamente no JSON da requisição, mas agora podemos utilizar a autenticação para obter esse ID. Removemos o ID do usuário do JSON e, no filtro, adicionamos o ID do usuário como um atributo no request. No controller, podemos recuperar esse atributo usando o método `request.getAttribute`. Com isso, garantimos mais segurança e simplificamos o processo de criação de tarefas, pois o usuário só poderá criar uma tarefa se estiver autenticado.
