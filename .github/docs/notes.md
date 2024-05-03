@@ -28,6 +28,7 @@
   - [21 - Validação das horas](#21---validação-das-horas)
   - [22 - Listando as tarefas](#22---listando-as-tarefas)
   - [23 - Update da tarefa](#23---update-da-tarefa)
+  - [24 - Update Parcial](#24---update-parcial)
 
 ## 1 - Configurando Ambiente
 
@@ -122,3 +123,7 @@ Nesta aula, vamos criar uma funcionalidade para listar todas as tarefas de um us
 ## 23 - Update da tarefa
 
 Nesta aula, aprendemos sobre como fazer o update de uma tarefa em um HTTP Servlet. Exploramos diferentes abordagens para realizar essa atualização, como definir um método de update para cada informação a ser alterada, fazer um mapeamento dos dados alterados ou copiar o objeto salvo e alterar as informações desejadas. Também vimos como utilizar variáveis de path para passar o ID da tarefa a ser atualizada na rota da requisição. Por fim, implementamos a funcionalidade de update em nosso código.
+
+## 24 - Update Parcial
+
+Na aula anterior, aprendemos a fazer a atualização de uma tarefa no nosso aplicativo. No entanto, percebemos que toda vez que precisamos alterar um campo, precisamos passar o objeto completo, o que pode levar a erros se algum campo for esquecido. Para resolver esse problema, criamos uma função que verifica os campos nulos e faz a mescla dos atributos entre o objeto recebido na requisição e o objeto retornado do banco de dados. Para isso, utilizamos a classe BeanWrapper do Java para acessar as propriedades do objeto. Também criamos um método para copiar apenas as propriedades não nulas entre dois objetos. Essa lógica nos permite fazer atualizações parciais de forma dinâmica e reutilizável em outros lugares do código.
