@@ -57,15 +57,28 @@ public class TaskController {
         return tasks;
     }
 
+    @SuppressWarnings("rawtypes")
     @PutMapping("/{id}")
-    public TaskModel update(@RequestBody TaskModel taskModel, @NonNull HttpServletRequest request,
+    public ResponseEntity update(@RequestBody TaskModel taskModel, @NonNull HttpServletRequest request,
             @PathVariable UUID id) {
 
         // metódo para fazer o put é atualizar uma tarefa.
         var task = this.taskRepository.findById(id).orElse(null);
 
+        if (task == null) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Tarefa não encontrada!");
+        }
+
+        var idUser = request.getAttribute("idUser");
+        if (!task.getIdUser().equals(idUser)) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body("Usuário não tem permissão para alterar essa tarefa!");
+        }
+
         Utils.copyNonNullProperties(taskModel, task);
 
-        return this.taskRepository.save(task);
+        var taskUpdated = this.taskRepository.save(task);
+
+        return ResponseEntity.ok().body(taskUpdated);
     }
 }

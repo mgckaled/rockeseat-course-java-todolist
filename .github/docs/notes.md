@@ -29,6 +29,7 @@
   - [22 - Listando as tarefas](#22---listando-as-tarefas)
   - [23 - Update da tarefa](#23---update-da-tarefa)
   - [24 - Update Parcial](#24---update-parcial)
+  - [25 - Validando usuário dono](#25---validando-usuário-dono)
 
 ## 1 - Configurando Ambiente
 
@@ -127,3 +128,7 @@ Nesta aula, aprendemos sobre como fazer o update de uma tarefa em um HTTP Servle
 ## 24 - Update Parcial
 
 Na aula anterior, aprendemos a fazer a atualização de uma tarefa no nosso aplicativo. No entanto, percebemos que toda vez que precisamos alterar um campo, precisamos passar o objeto completo, o que pode levar a erros se algum campo for esquecido. Para resolver esse problema, criamos uma função que verifica os campos nulos e faz a mescla dos atributos entre o objeto recebido na requisição e o objeto retornado do banco de dados. Para isso, utilizamos a classe BeanWrapper do Java para acessar as propriedades do objeto. Também criamos um método para copiar apenas as propriedades não nulas entre dois objetos. Essa lógica nos permite fazer atualizações parciais de forma dinâmica e reutilizável em outros lugares do código.
+
+## 25 - Validando usuário dono
+
+Nesta aula, vamos realizar uma validação na atualização de tarefas em nossa aplicação. Atualmente, estamos validando se o usuário está autenticado, mas não verificamos se a tarefa pertence a ele. Vamos criar um novo usuário de teste e tentar atualizar uma tarefa que não pertence a ele. Precisamos garantir que, após autenticar o usuário, verifiquemos se a tarefa que ele está tentando alterar é realmente dele. Faremos essa validação e também verificaremos se a tarefa existe antes de permitir a alteração. Ao final da aula, corrigiremos um erro de duplicação de salvamento e teremos uma validação completa para garantir que apenas o dono da tarefa possa alterá-la.
