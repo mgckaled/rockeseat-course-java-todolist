@@ -1,0 +1,102 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "rs_mc_java_todolist",
+    "collectionId": "c79d17d4-bf3c-4db6-8a19-9a7884db8510",
+    "dateExported": "2024-05-03T14:30:27.568Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e09e420c-0f6c-48e6-8838-46e396c5da8e",
+            "colId": "c79d17d4-bf3c-4db6-8a19-9a7884db8510",
+            "containerId": "",
+            "name": "create user",
+            "url": "http://localhost:8080/users/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-05-01T14:51:43.511Z",
+            "modified": "2024-05-03T11:58:54.159Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"mgck\",\n  \"name\": \"marcel\",\n  \"password\": \"12345\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "mgck",
+                    "password": "12345"
+                }
+            }
+        },
+        {
+            "_id": "26fdf655-0034-4d6a-8ba7-92f5ead2e177",
+            "colId": "c79d17d4-bf3c-4db6-8a19-9a7884db8510",
+            "containerId": "",
+            "name": "create task",
+            "url": "http://localhost:8080/tasks/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-05-02T13:36:13.995Z",
+            "modified": "2024-05-03T11:58:50.378Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n  \"title\": \"título test\",\n  \"description\": \"task test 3\",\n  \"priority\": \"ALTA\",\n  \"startAt\": \"2024-05-04T12:30:00\",\n  \"endAt\": \"2024-05-05T12:30:00\"\n} ",
+                "form": []
+            },
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "mgck",
+                    "password": "12345"
+                }
+            }
+        },
+        {
+            "_id": "96d81faf-b7b4-43a8-b17c-ab87118f2f93",
+            "colId": "c79d17d4-bf3c-4db6-8a19-9a7884db8510",
+            "containerId": "",
+            "name": "list tasks by user id",
+            "url": "http://localhost:8080/tasks/",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-05-02T21:19:07.236Z",
+            "modified": "2024-05-03T04:13:49.738Z",
+            "headers": [],
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "mgck1",
+                    "password": "12345"
+                }
+            }
+        },
+        {
+            "_id": "c0422154-2e9e-4a1a-85d9-6afef790f81b",
+            "colId": "c79d17d4-bf3c-4db6-8a19-9a7884db8510",
+            "containerId": "",
+            "name": "update task by id",
+            "url": "http://localhost:8080/tasks/e6afbe92-24b5-4c3a-a5af-1978bb43fbc4",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-05-03T00:41:01.213Z",
+            "modified": "2024-05-03T11:06:54.312Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"título dentro dos 50 caracteres\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "basic",
+                "basic": {
+                    "username": "mgck",
+                    "password": "12345"
+                }
+            }
+        }
+    ],
+    "ref": "gE4dPyRrX_wOlIcxRF24GBNBTENU_L3gBflc5p3WUal91AoEIp85lTny5-fOQXzzrhuDMwK8D2t27e5JwZppkA"
+}
