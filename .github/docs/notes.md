@@ -30,6 +30,7 @@
   - [23 - Update da tarefa](#23---update-da-tarefa)
   - [24 - Update Parcial](#24---update-parcial)
   - [25 - Validando usuário dono](#25---validando-usuário-dono)
+  - [26 - Try catch](#26---try-catch)
 
 ## 1 - Configurando Ambiente
 
@@ -132,3 +133,7 @@ Na aula anterior, aprendemos a fazer a atualização de uma tarefa no nosso apli
 ## 25 - Validando usuário dono
 
 Nesta aula, vamos realizar uma validação na atualização de tarefas em nossa aplicação. Atualmente, estamos validando se o usuário está autenticado, mas não verificamos se a tarefa pertence a ele. Vamos criar um novo usuário de teste e tentar atualizar uma tarefa que não pertence a ele. Precisamos garantir que, após autenticar o usuário, verifiquemos se a tarefa que ele está tentando alterar é realmente dele. Faremos essa validação e também verificaremos se a tarefa existe antes de permitir a alteração. Ao final da aula, corrigiremos um erro de duplicação de salvamento e teremos uma validação completa para garantir que apenas o dono da tarefa possa alterá-la.
+
+## 26 - Try catch
+
+Nesta aula, aprendemos a customizar o tratamento de erros em uma aplicação Spring. Utilizamos a anotação `@ControllerAdvice` para criar um controlador de exceções global. Dentro desse controlador, definimos um método para tratar a exceção `HTTPMessageNotReadableException`. Utilizamos a classe `ResponseEntity` para retornar uma resposta personalizada ao usuário, com o status de erro e uma mensagem amigável. Também aprendemos a lançar exceções personalizadas em nosso código, utilizando a palavra-chave `throws`. Dessa forma, podemos tratar erros de forma mais adequada e fornecer mensagens claras aos usuários.
