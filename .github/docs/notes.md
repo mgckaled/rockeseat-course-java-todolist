@@ -31,6 +31,7 @@
   - [24 - Update Parcial](#24---update-parcial)
   - [25 - Validando usuário dono](#25---validando-usuário-dono)
   - [26 - Try catch](#26---try-catch)
+  - [27 - Live reload](#27---live-reload)
 
 ## 1 - Configurando Ambiente
 
@@ -137,3 +138,6 @@ Nesta aula, vamos realizar uma validação na atualização de tarefas em nossa 
 ## 26 - Try catch
 
 Nesta aula, aprendemos a customizar o tratamento de erros em uma aplicação Spring. Utilizamos a anotação `@ControllerAdvice` para criar um controlador de exceções global. Dentro desse controlador, definimos um método para tratar a exceção `HTTPMessageNotReadableException`. Utilizamos a classe `ResponseEntity` para retornar uma resposta personalizada ao usuário, com o status de erro e uma mensagem amigável. Também aprendemos a lançar exceções personalizadas em nosso código, utilizando a palavra-chave `throws`. Dessa forma, podemos tratar erros de forma mais adequada e fornecer mensagens claras aos usuários.
+
+## 27 - Live reload
+Nesta aula, vamos aprender sobre o DevTools, uma dependência do Spring Boot que facilita o desenvolvimento de aplicações. O DevTools oferece recursos como Live Reload, que permite que a aplicação seja recarregada automaticamente sempre que houver uma alteração no código. Vamos ver como adicionar essa dependência ao nosso projeto, seja através do Maven ou do VS Code, e também como executar a aplicação usando o Maven CLI ou o modo de Debug do VS Code. Com o DevTools, podemos agilizar o processo de desenvolvimento e visualizar as alterações em tempo real.
