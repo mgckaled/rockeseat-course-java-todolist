@@ -27,6 +27,7 @@
   - [20 - Setando atributo na request](#20---setando-atributo-na-request)
   - [21 - Validação das horas](#21---validação-das-horas)
   - [22 - Listando as tarefas](#22---listando-as-tarefas)
+  - [23 - Update da tarefa](#23---update-da-tarefa)
 
 ## 1 - Configurando Ambiente
 
@@ -117,3 +118,7 @@ Nesta aula, vamos aprender a adicionar validações em nossa aplicação. Vamos 
 ## 22 - Listando as tarefas
 
 Nesta aula, vamos criar uma funcionalidade para listar todas as tarefas de um usuário com base em suas credenciais. Já temos a validação para buscar as tarefas apenas do usuário em questão. Agora, vamos criar um método público para listar as tarefas, utilizando o `HttpServletRequest` e o método `findAll` do `TaskRepository`. No entanto, precisamos filtrar as tarefas pelo ID do usuário. Faremos isso utilizando o método `findByIdUser` no repositório e passando o ID do usuário obtido através do `getAttribute`. Em seguida, retornaremos a lista de tarefas encontradas. Por fim, faremos um teste para verificar se tudo está funcionando corretamente.
+
+## 23 - Update da tarefa
+
+Nesta aula, aprendemos sobre como fazer o update de uma tarefa em um HTTP Servlet. Exploramos diferentes abordagens para realizar essa atualização, como definir um método de update para cada informação a ser alterada, fazer um mapeamento dos dados alterados ou copiar o objeto salvo e alterar as informações desejadas. Também vimos como utilizar variáveis de path para passar o ID da tarefa a ser atualizada na rota da requisição. Por fim, implementamos a funcionalidade de update em nosso código.
