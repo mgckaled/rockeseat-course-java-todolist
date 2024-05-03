@@ -32,6 +32,7 @@
   - [25 - Validando usuário dono](#25---validando-usuário-dono)
   - [26 - Try catch](#26---try-catch)
   - [27 - Live reload](#27---live-reload)
+  - [28 - Deploy](#28---deploy)
 
 ## 1 - Configurando Ambiente
 
@@ -141,3 +142,7 @@ Nesta aula, aprendemos a customizar o tratamento de erros em uma aplicação Spr
 
 ## 27 - Live reload
 Nesta aula, vamos aprender sobre o DevTools, uma dependência do Spring Boot que facilita o desenvolvimento de aplicações. O DevTools oferece recursos como Live Reload, que permite que a aplicação seja recarregada automaticamente sempre que houver uma alteração no código. Vamos ver como adicionar essa dependência ao nosso projeto, seja através do Maven ou do VS Code, e também como executar a aplicação usando o Maven CLI ou o modo de Debug do VS Code. Com o DevTools, podemos agilizar o processo de desenvolvimento e visualizar as alterações em tempo real.
+
+## 28 - Deploy
+
+Nesta aula, aprendemos como colocar nossa aplicação Spring Boot em produção utilizando a plataforma render.com. Exploramos as opções gratuitas disponíveis, mas também discutimos as limitações desses ambientes compartilhados. Para começar, fizemos o cadastro no render.com e autenticamos usando o GitHub. Em seguida, fizemos uma alteração no código do projeto, criando um arquivo Dockerfile para configurar a imagem de construção da nossa aplicação. Utilizamos comandos como "expose" e "copy" para definir as configurações necessárias. Por fim, fizemos o push do código para o render.com e criamos um webservice, configurando o ambiente de execução e a versão gratuita. Testamos a aplicação e discutimos as opções de escalabilidade e uso de bancos de dados. O render.com é uma ótima opção para colocar nossa aplicação Spring Boot em produção de forma simples e eficiente.
